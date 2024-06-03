@@ -6,7 +6,7 @@ import { faCartShopping, faClose , faTrash} from "@fortawesome/free-solid-svg-ic
 import { cartContext } from "../app/context";
 import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "@/utils/queries";
-import { useContext } from "react";
+import { ServerContextJSONValue, useContext } from "react";
 import Image from "next/image";
 
 const ItemDisplay = ({slug , dispatch} : {slug : string , dispatch : Function}) => {
@@ -29,7 +29,11 @@ const ItemDisplay = ({slug , dispatch} : {slug : string , dispatch : Function}) 
   </div>;
 }
 
-const Cart: any = () => {
+const Cart = () => {
+  interface CardDataState {
+    open : Boolean
+    slugs : string[]
+  }
   const [cartData , setCartData] : any = useContext(cartContext)
   return (
         cartData.open && (

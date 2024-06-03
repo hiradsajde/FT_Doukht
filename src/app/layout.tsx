@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <Cart open={false}/>
+          <Cart/>
           <Navigation />
           <Container>{children}</Container>
         </Provider>

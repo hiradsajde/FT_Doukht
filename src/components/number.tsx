@@ -5,7 +5,6 @@ interface NumberProps {
 }
 
 const Number : FC<NumberProps> = ({children}) => {
-    const persianNums = "۰۱۲۳۴۵۶۷۸۹".split("")
     return <>{children ? parseInt(children.toString()).toLocaleString('fa-EG') : ""}</>
 }
 

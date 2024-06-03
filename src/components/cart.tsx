@@ -41,7 +41,7 @@ const Cart = () => {
                     <FontAwesomeIcon icon={faCartShopping} />
                     <h3>سبد خرید شما</h3>
                   </div>
-                  <div className="text-2xl mt-1" onClick={() => setCartData({do : "close"})}>
+                  <div className="text-2xl mt-1 hover:cursor-pointer" onClick={() => setCartData({do : "close"})}>
                     <FontAwesomeIcon icon={faClose} />
                   </div>
                 </div>

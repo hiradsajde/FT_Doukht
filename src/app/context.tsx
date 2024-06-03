@@ -19,7 +19,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
         }
         return { ...state, slugs: [...state.slugs, action.slug] };
       case "remove":
-        return {...state , slugs : state.slugs.splice(state.slugs.indexOf(action.slug), 1)};
+        return {...state , slugs : state.slugs.filter((slug : string) => slug !== action.slug)};
     }
     return state;
   };

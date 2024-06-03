@@ -8,7 +8,6 @@ import {
   faWindowRestore,
   faTicket,
   faUniversity,
-  IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
 import Hero from "@/components/hero";
 import { IconListProps } from "@/utils/types";

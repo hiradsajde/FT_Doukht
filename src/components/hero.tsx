@@ -1,16 +1,16 @@
 "use client";
 
-import IconList from "./iconlist";
+import IconList from "@/components/iconlist";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUniversity,
   faShoppingCart,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { cartContext } from "../app/context";
+import { cartContext } from "@/app/context";
 import { useContext} from "react";
-import Button from "./button";
-import Number from "./number";
+import Button from "@/components/button";
+import Number from "@/components/number";
 import { HeroProps } from "@/utils/types";
 
 

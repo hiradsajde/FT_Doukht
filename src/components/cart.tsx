@@ -23,7 +23,7 @@ const ItemDisplay = ({slug , dispatch} : {slug : string , dispatch : Function}) 
       <Image src={data.courseBySlug.thumbnail} width={64} height={64} alt={data.courseBySlug.title} className="rounded-xl w-16 h-16"/>
       {data.courseBySlug.title}
     </div>
-    <div className="text-gray" onClick={() => {dispatch({do:'remove', slug:slug})}}>
+    <div className="text-gray hover:cursor-pointer" onClick={() => {dispatch({do:'remove', slug:slug})}}>
       <FontAwesomeIcon icon={faTrash} />
     </div>
   </div>;

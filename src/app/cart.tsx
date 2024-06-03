@@ -46,7 +46,7 @@ const Cart: any = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  {cartData.slugs.map((slug : string) => <ItemDisplay slug={slug} dispatch={setCartData}/>)}
+                  {cartData.slugs.map((slug : string , index : number) => <ItemDisplay slug={slug} key={index} dispatch={setCartData}/>)}
                 </div>
               </div>
             </div>

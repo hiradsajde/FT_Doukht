@@ -4,7 +4,7 @@ import IconList from "./icolist";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversity } from '@fortawesome/free-solid-svg-icons'
 import { cartContext } from "@/app/context";
-import { useContext , useRef} from "react";
+import { useContext} from "react";
 import Button from "./button";
 import Number from "./number";
 

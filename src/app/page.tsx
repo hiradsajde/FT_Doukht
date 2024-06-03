@@ -2,7 +2,6 @@
 import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "@/utils/queries";
 import BarLoader from "react-spinners/BarLoader";
-import { CSSProperties } from "react";
 import {
   faPhoneAlt,
   faAngleUp,

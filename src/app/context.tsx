@@ -1,7 +1,7 @@
 "use client";
 
 import { ApolloProvider } from "@apollo/client";
-import { client } from "@/utils/client";
+import { client } from "@/utils/graphql/client";
 import { createContext, useReducer , useEffect} from "react";
 
 export const cartContext: any = createContext([]);

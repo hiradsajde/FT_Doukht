@@ -7,7 +7,7 @@ import {
   faShoppingCart,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { cartContext } from "@/app/context";
+import { cartContext } from "../app/context";
 import { useContext} from "react";
 import Button from "./button";
 import Number from "./number";
@@ -40,7 +40,7 @@ function Hero({
         <h1 className="text-5xl font-bold">{title}</h1>
         <h6 className="text-gray text-lg text-justify mt-8">{subTitle}</h6>
         <div className="flex items-center mt-6">
-          <FontAwesomeIcon icon={faUniversity} className="text-red-600" />
+          <FontAwesomeIcon icon={faUniversity} className="text-red-600" width={16} height={16}/>
           <span className="mr-2 font-bold ltr">
             +<Number>{enrollees}</Number>
           </span>
@@ -56,10 +56,11 @@ function Hero({
         >
           <a
             onClick={() => {
+
               setCartData({ do: "add", slug: slug });
             }}
           >
-            <Button mode="primary" text="خرید کنید" Icon={faShoppingCart} slug={slug}/>
+            <Button mode="primary" text="خرید کنید" Icon={faShoppingCart} slug={slug} cartData={cartData}/>
           </a>
           <a href="tel://+989357008822">
             <Button

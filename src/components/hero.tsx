@@ -12,21 +12,8 @@ import { useContext} from "react";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import Button from "./button";
 import Number from "./number";
+import { HeroProps } from "@/utils/types";
 
-interface IconList { 
-    icon: IconDefinition 
-    text: string
-}
-interface HeroProps {
-    title: string;
-    sampleVideoCover: string;
-    sampleVideo: string;
-    subTitle: string;
-    enrollees: string;
-    slug: string;
-    price: number;
-    list: IconList[];
-}
 
 function Hero({
   title,

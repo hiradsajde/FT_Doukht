@@ -1,11 +1,11 @@
 "use client";
 
-import { IranYekan } from "@/fonts";
+import { IranYekan } from "@/utils/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faClose , faTrash} from "@fortawesome/free-solid-svg-icons";
 import { cartContext } from "../app/context";
 import { useQuery } from "@apollo/client";
-import { GET_PRODUCT } from "@/utils/queries";
+import { GET_PRODUCT } from "@/utils/graphql/queries";
 import { ServerContextJSONValue, useContext } from "react";
 import Image from "next/image";
 
@@ -30,10 +30,6 @@ const ItemDisplay = ({slug , dispatch} : {slug : string , dispatch : Function}) 
 }
 
 const Cart = () => {
-  interface CardDataState {
-    open : Boolean
-    slugs : string[]
-  }
   const [cartData , setCartData] : any = useContext(cartContext)
   return (
         cartData.open && (

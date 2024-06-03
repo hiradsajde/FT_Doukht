@@ -1,6 +1,6 @@
 "use client";
 import { useQuery } from "@apollo/client";
-import { GET_PRODUCT } from "@/utils/queries";
+import { GET_PRODUCT } from "@/utils/graphql/queries";
 import BarLoader from "react-spinners/BarLoader";
 import {
   faPhoneAlt,
@@ -11,13 +11,10 @@ import {
   IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
 import Hero from "@/components/hero";
+import { IconListProps } from "@/utils/types";
 
-interface IconList { 
-  icon: IconDefinition 
-  text: string
-}
 
-function HeroDisplay({ list , slug}: { list: IconList[] , slug:string}) {
+function HeroDisplay({ list , slug}: { list: IconListProps[] , slug:string}) {
   const { loading, error, data } = useQuery(GET_PRODUCT , {
     variables : {
       slug : slug

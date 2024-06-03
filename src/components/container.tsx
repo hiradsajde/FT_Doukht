@@ -1,14 +1,10 @@
-import { ReactNode, FC } from "react";
-import { IranYekan } from "@/fonts";
+import { IranYekan } from "@/utils/fonts";
+import { ChildrenProps } from "@/utils/types";
 
-interface ContainerProps { 
-  children : ReactNode
-}
-
-const Container = (props : ContainerProps) => {
+const Container = ({children} : ChildrenProps) => {
   return (
     <div className={`flex justify-center ${IranYekan.className}`}>
-      <div className="container">{props.children}</div>
+      <div className="container">{children}</div>
     </div>
   );
 };

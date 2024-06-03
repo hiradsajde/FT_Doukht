@@ -6,7 +6,7 @@ import { faCartShopping, faClose , faTrash} from "@fortawesome/free-solid-svg-ic
 import { cartContext } from "../app/context";
 import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "@/utils/graphql/queries";
-import { ServerContextJSONValue, useContext } from "react";
+import { useContext } from "react";
 import Image from "next/image";
 
 const ItemDisplay = ({slug , dispatch} : {slug : string , dispatch : Function}) => {

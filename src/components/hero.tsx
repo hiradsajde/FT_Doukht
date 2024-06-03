@@ -53,16 +53,14 @@ function Hero({
           <Number>{price}</Number> تومان
         </div>
         <div
-          className={`mt-8 lg:flex lg:flex-wrap w-full justify-between ${
-            cartData.slugs.includes(slug) && "grayscale"
-          }`}
+          className={`mt-8 lg:flex lg:flex-wrap w-full justify-between`}
         >
           <a
             onClick={() => {
               setCartData({ do: "add", slug: slug });
             }}
           >
-            <Button mode="primary" text="خرید کنید" Icon={faShoppingCart} />
+            <Button mode="primary" text="خرید کنید" Icon={faShoppingCart} slug={slug}/>
           </a>
           <a href="tel://+989357008822">
             <Button

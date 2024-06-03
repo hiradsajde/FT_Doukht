@@ -18,7 +18,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
         return { ...state, open: false };
         
       case "add":
-        if (state.slugs.includes(action.slug)) {
+        if (state.slugs?.includes(action.slug)) {
           return { ...state };
         }
         return { ...state, slugs: [...state.slugs, action.slug] };

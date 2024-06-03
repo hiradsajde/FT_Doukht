@@ -17,7 +17,7 @@ const Button: FC<ButtonProps> = ({ mode, text, Icon ,slug}) => {
         mode == "primary" && "bg-primary text-white"
       } ${
         mode == "secondary" && "bg-white text-primary"
-      } ${(cartData.slugs?.includes(slug)) && "grayscale"} border border-primary"} text-lg flex justify-center items-center hover:cursor-pointer`}
+      } ${(cartData.slugs.includes(slug)) && "grayscale"} border border-primary"} text-lg flex justify-center items-center hover:cursor-pointer`}
     >
       <span>
         {Icon && <FontAwesomeIcon icon={Icon} />} {text}

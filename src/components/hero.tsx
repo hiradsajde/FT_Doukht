@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { cartContext } from "@/app/context";
 import { useContext} from "react";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import Button from "./button";
 import Number from "./number";
 import { HeroProps } from "@/utils/types";

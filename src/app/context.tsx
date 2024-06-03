@@ -33,6 +33,8 @@ export function Provider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if(JSON.parse(sessionStorage.getItem('cart') || "{}")){
       dispatch({do:'init' , payload:JSON.parse(sessionStorage.getItem('cart') || "{}")})
+    } else {
+      dispatch({do:'init' , payload:[]})
     }
   } , [])
   useEffect(() => {

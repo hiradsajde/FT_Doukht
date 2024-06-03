@@ -20,12 +20,15 @@ export function Provider({ children }: { children: React.ReactNode }) {
         return { ...state, slugs: [...state.slugs, action.slug] };
       case "remove":
         return {...state , slugs : state.slugs.filter((slug : string) => slug !== action.slug)};
+      case "reload":
+        return {...state , loaded : true}
     }
     return state;
   };
-  const [state, dispatch] = useReducer(reducer, { slugs: [], open: false });
+  const [state, dispatch] = useReducer(reducer, { slugs: [], open: false , loaded : false});
   useEffect(() => {
     state.slugs = JSON.parse(sessionStorage.getItem('cart') ?? "[]")
+    dispatch({do : 'reload'})
   } , [])
   useEffect(() => {
     sessionStorage.setItem('cart' , Array.isArray(state.slugs) ? JSON.stringify([...state.slugs]) : "[]")

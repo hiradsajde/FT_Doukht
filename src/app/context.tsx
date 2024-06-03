@@ -20,7 +20,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
         return { ...state, slugs: [...state.slugs, action.slug] };
       case "remove":
         const data = {...state}
-        data.slugs = state.slugs.splice(state.slugs.indexOf(action.slug), 1);
+        data.slugs = data.slugs.splice(state.slugs.indexOf(action.slug), 1);
         return data;
     }
     return state;

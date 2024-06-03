@@ -21,15 +21,12 @@ function HeroDisplay({ list , slug}: { list: IconListProps[] , slug:string}) {
     }
   });
 
-
   if (loading) return <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"><BarLoader color="#6454C7"/></div>;
   if (error) return <p>خطا : {error.message}</p>;
   return <Hero 
   {...data.courseBySlug}
   list={list} />;
 }
-
-
 
 export default function Page(props: any) {
   return (

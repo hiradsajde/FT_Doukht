@@ -1,7 +1,5 @@
-"use client";
-import { useQuery } from "@apollo/client";
+import { client } from "@/utils/graphql/client";
 import { GET_PRODUCT } from "@/utils/graphql/queries";
-import BarLoader from "react-spinners/BarLoader";
 import {
   faPhoneAlt,
   faAngleUp,
@@ -13,15 +11,8 @@ import Hero from "@/components/hero";
 import { IconListProps } from "@/utils/types";
 
 
-function HeroDisplay({ list , slug}: { list: IconListProps[] , slug:string}) {
-  const { loading, error, data } = useQuery(GET_PRODUCT , {
-    variables : {
-      slug : slug
-    }
-  });
-
-  if (loading) return <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"><BarLoader color="#6454C7"/></div>;
-  if (error) return <p>خطا : {error.message}</p>;
+async function HeroDisplay({ list , slug}: { list: IconListProps[] , slug:string}) {
+  const {data} = await client.query({query : GET_PRODUCT , variables:{slug}})
   return <Hero 
   {...data.courseBySlug}
   list={list} />;

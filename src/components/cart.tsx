@@ -3,7 +3,7 @@
 import { IranYekan } from "@/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faClose , faTrash} from "@fortawesome/free-solid-svg-icons";
-import { cartContext } from "./context";
+import { cartContext } from "../app/context";
 import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "@/utils/queries";
 import { useContext } from "react";

@@ -34,8 +34,8 @@ const Cart: any = () => {
   return (
         cartData.open && (
           <div className={`relative ${IranYekan.className}`}>
-            <div className="fixed backdrop-blur-xl w-full h-full z-20">
-              <div className="left-0 w-96 bg-white z-30 h-full shadow-lg absolute p-6">
+            <div className="fixed backdrop-blur-xl w-full h-full z-20" onClick={() => setCartData({do : "close"})}></div>
+              <div className="left-0 w-96 bg-white z-30 h-full shadow-lg fixed p-6">
                 <div className="w-full flex justify-between items-center text-gray">
                   <div className=" flex items-center gap-4 text-xl">
                     <FontAwesomeIcon icon={faCartShopping} />
@@ -46,11 +46,11 @@ const Cart: any = () => {
                   </div>
                 </div>
                 <div className="mt-6">
+                  {cartData.slugs.length == 0 && <p className="text-center text-gray mt-8">سبد خرید خالی می باشد</p>}
                   {cartData.slugs.map((slug : string , index : number) => <ItemDisplay slug={slug} key={index} dispatch={setCartData}/>)}
                 </div>
               </div>
             </div>
-          </div>
         )
   );
 };

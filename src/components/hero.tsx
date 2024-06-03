@@ -2,7 +2,7 @@
 
 import IconList from "./icolist";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUniversity } from '@fortawesome/free-solid-svg-icons'
+import { faUniversity , faShoppingCart , faPhone} from '@fortawesome/free-solid-svg-icons'
 import { cartContext } from "@/app/context";
 import { useContext} from "react";
 import Button from "./button";
@@ -36,10 +36,10 @@ function Hero({ data , list}: { data: any , list : any}) {
             <a onClick={() => {
                 setCartData({do : 'add' , slug : data.courseBySlug.slug})
             }}>
-                <Button mode="primary" text="خرید کنید"/>
+                <Button mode="primary" text="خرید کنید" Icon={faShoppingCart}/>
             </a>
             <a href="tel://+989357008822">
-                <Button mode="secondary" text="نیاز به مشاوره دارید؟"/>
+                <Button mode="secondary" text="نیاز به مشاوره دارید؟" Icon={faPhone}/>
             </a>
         </div>
       </div>
